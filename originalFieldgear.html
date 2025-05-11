@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strap1 — Gallery</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
+  <style>
+	@font-face {
+	font-family: 'Bronzion Castle';
+	src: url('fonts/AlteSchwabacherDemibold-nRm0.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+    body {
+      background: url('fon1.jpg') repeat;
+      color: #111;
+      font-family: 'Georgia', serif;
+    }
+    header, footer {
+      background-color: #e6e6e6;
+      padding: 1rem;
+      text-align: center;
+      border-top: 4px solid #000;
+      border-bottom: 4px solid #000;
+    }
+    h1 {
+      font-family: 'Bronzion Castle';
+      font-weight: 700;
+      color: #000;
+      letter-spacing: 1px;
+    }
+    .carousel-inner {
+      display: flex;
+      align-items: center;
+	  text-align: center;
+      color: #fff;
+      font-weight: bold;
+    }
+    .carousel-item {
+      flex: 0 0 100%;
+    }
+    .carousel-inner .row {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+    }
+    .carousel-inner .col {
+      flex: 0 0 25%;
+      padding: 0 0.5rem;
+      position: relative;
+    }
+    .carousel-inner img, .carousel-inner video {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border: 3px solid #999;
+      border-radius: 6px;
+      transition: transform 0.3s, filter 0.3s;
+      display: block;
+    }
+    .carousel-inner img:hover, .carousel-inner video:hover {
+      transform: scale(1.05);
+      filter: brightness(1.1);
+    }
+    .video-icon {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      padding: 4px 8px;
+      font-size: 0.9rem;
+      border-radius: 4px;
+    }
+    .btn-gold {
+      background-color: #b89c4c;
+      border: none;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      font-weight: bold;
+      border-radius: 6px;
+      text-transform: uppercase;
+    }
+    .btn-gold:hover {
+      background-color: #d4af37;
+    }
+	.custom-text-block {
+		background-color: rgba(255, 255, 255, 0.85);
+		border-radius: 12px;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+		color: #111;
+		font-size: 1.2rem;
+	}
+    .youtube-block {
+      margin: 4rem 0;
+      padding: 2rem;
+      background-color: rgba(0, 0, 0, 0.05);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      text-align: center;
+	}
+	.click-heading {
+	font-family: 'Bronzion Castle';
+	color: #fff;
+	font-weight: bold;
+	text-shadow:
+    -1px -1px 0 #444,
+     1px -1px 0 #444,
+    -1px  1px 0 #444,
+     1px  1px 0 #444;
+}
+    .youtube-block h2 {
+      text-align: center;
+      color: #fff;
+      font-weight: bold;
+      text-shadow:
+        -1px -1px 0 #444,
+         1px -1px 0 #444,
+        -1px  1px 0 #444,
+         1px  1px 0 #444;
+    }
+    .youtube-block iframe {
+      width: 100%;
+      height: 450px;
+      border: none;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Strap1 - Gallery</h1>
+  </header>
+
+  <main class="container">
+    <div class="text-start my-4">
+      <a href="index.html" class="btn btn-gold">← Back to Home</a>
+    </div>
+	
+	<div class="custom-text-block my-5 p-4">
+		<h2>About Strap2</h2>
+		<p>Few more words about straps.</p>
+		<p>They are both 16mm wide, as they should be, non-synthetic, and it was really hard to find over the whole world .... </p>
+		<p>they went a long way to get to me. The slider buckle and tips weren't found on the market, so it was necessary to make a blueprint, order metal parts, and separately stamps. </p>
+		<p>All assembled and painted by my hands, maybe not perfect - but as it is. All threads are not synthetic too. All stitching is done by hand.</p>
+		<p>Each strap takes a few hours of my time and the price will be definitely bigger for all next.</p>
+	</div>
+
+    <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+	<h2 class="click-heading mb-4 text-center">Click on image to make it lager</h2>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col"><a href="img/1a.jpg" class="glightbox" data-gallery="strap1"><img src="img/1a.jpg" alt="Strap1 Photo 1a"></a></div>
+            <div class="col"><a href="img/1b.jpg" class="glightbox" data-gallery="strap1"><img src="img/1b.jpg" alt="Strap1 Photo 1b"></a></div>
+            <div class="col"><a href="img/1c.jpg" class="glightbox" data-gallery="strap1"><img src="img/1c.jpg" alt="Strap1 Photo 1c"></a></div>
+            <div class="col"><a href="img/1d.jpg" class="glightbox" data-gallery="strap1"><img src="img/1d.jpg" alt="Strap1 Photo 1d"></a></div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col"><a href="img/1e.jpg" class="glightbox" data-gallery="strap1"><img src="img/1e.jpg" alt="Strap1 Photo 1e"></a></div>
+            <div class="col"><a href="img/1f.jpg" class="glightbox" data-gallery="strap1"><img src="img/1f.jpg" alt="Strap1 Photo 1f"></a></div>
+            <div class="col"><a href="img/1g.jpg" class="glightbox" data-gallery="strap1"><img src="img/1g.jpg" alt="Strap1 Photo 1g"></a></div>
+			<div class="col"><a href="img/1h.jpg" class="glightbox" data-gallery="strap1"><img src="img/1h.jpg" alt="Strap1 Photo 1h"></a></div>
+            <div class="col position-relative">
+              <a href="video/strap1.mp4" class="glightbox d-block position-relative" data-gallery="strap1" data-type="video">
+                <video muted autoplay loop playsinline poster="img/1a.jpg">
+                  <source src="video/strap1.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <div class="video-icon">▶</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <div class="youtube-block">
+	  <h2 class="click-heading mb-4 text-center">Please find more information about used materials and the making process</h2>
+      <iframe src="https://www.youtube.com/embed/qFNRySl9jX0" title="YouTube video" allowfullscreen></iframe>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const lightbox = GLightbox({
+      selector: '.glightbox',
+      loop: true
+    });
+  </script>
+</body>
+</html>
