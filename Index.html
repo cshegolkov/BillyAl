@@ -52,7 +52,10 @@
       background-color: #e0e0e0;
       padding: 1rem;
     }
-
+    .sidebar {
+    font-family: 'Bronzion Castle', Georgia, serif;
+    font-size: 1rem;
+    }
     .sidebar .nav-link {
       font-weight: bold;
       color: #333;
@@ -191,12 +194,20 @@
 
     <!-- Main content -->
     <main>
-      <div class="video-block">
-        <h2>Let me introduce myself</h2>
-        <div class="ratio ratio-16x9">
-          <iframe src="https://www.youtube.com/embed/qFNRySl9jX0" title="YouTube video" allowfullscreen></iframe>
-        </div>
-      </div>
+      <div class="d-flex justify-content-center my-5">
+    <div class="text-center w-100 p-4" style="font-family: 'Bronzion Castle'; max-width: 900px; border: 4px double #333; border-radius: 12px; background-color: #e0e0e0;">
+    <h2 class="click-heading mb-4">
+      Let me introduce myself
+    </h2>
+    <div class="ratio ratio-16x9 mb-4">
+      <iframe
+        src="https://www.youtube.com/embed/qFNRySl9jX0"
+        title="YouTube video"
+        allowfullscreen>
+      </iframe>
+    </div>  
+    </div>
+    </div>
     </main>
   </div>
 
