@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BillyAl Workshop - Main page</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
   <style>
-	@font-face {
-	font-family: 'Bronzion Castle';
-	src: url('fonts/friz-quadrata-regular.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-	}
-    body {
-    background: url('splinter-fabric1.jpg') no-repeat center center;
-    background-size: cover;
-      color: #111;
-      font-family: 'Georgia', serif;
+    @font-face {
+      font-family: 'Bronzion Castle';
+      src: url('fonts/friz-quadrata-regular.ttf') format('truetype');
     }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: Georgia, serif;
+      background: url('splinter-fabric1.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #111;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
     header, footer {
       background-color: #e0e0e0;
       padding: 1.5rem;
@@ -26,10 +33,51 @@
       border-top: 4px solid #000;
       border-bottom: 4px solid #000;
     }
-	.section-link a {
-      text-decoration: none;
-      color: inherit;
-	}
+
+    footer {
+      font-size: 0.9rem;
+      color: #333;
+    }
+
+    .wrapper {
+      flex: 1 0 auto;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .sidebar {
+      min-height: 100%;
+      width: 250px;
+      border-right: 1px solid #ccc;
+      background-color: #e0e0e0;
+      padding: 1rem;
+    }
+
+    .sidebar .nav-link {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .sidebar .nav-link:hover {
+      background-color: #ddd;
+      color: #000;
+    }
+
+    .sidebar .nav-link[data-bs-toggle="collapse"]::after {
+      content: "▼";
+      float: right;
+      transition: transform 0.3s;
+    }
+
+    .sidebar .nav-link[aria-expanded="true"]::after {
+      transform: rotate(180deg);
+    }
+
+    main {
+      flex-grow: 1;
+      padding: 2rem;
+    }
+
     h1 {
       font-family: 'Bronzion Castle', cursive;
       font-weight: 700;
@@ -37,110 +85,126 @@
       color: #111;
       letter-spacing: 2px;
     }
-    main {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      padding: 2rem 1rem;
+
+    .video-block {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+      background-color: #e0e0e0;
+      border: 4px double #333;
+      border-radius: 12px;
     }
-    .section-link {
-      background: #e0e0e0;
-      border: 4px double #333; border-radius: 12px; background-color: #e0e0e0;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+    .video-block h2 {
       text-align: center;
-      padding: 1rem;
-      transition: transform 0.3s;
+      font-family: 'Bronzion Castle', cursive;
+      margin-bottom: 1rem;
     }
-    .section-link:hover {
-      transform: translateY(-5px);
-    }
-    .section-link img {
-      width: 100%;
-      max-width: 300px;
-      height: auto;
+
+    .ratio iframe {
       border-radius: 6px;
       border: 2px solid #888;
     }
-    .section-link h2 {
-      margin-top: 0.75rem;
-      font-size: 1.5rem;
-      font-family: 'Bronzion Castle', cursive;
-      color: #000;
-    }
-    footer p {
-      margin: 0;
-      font-size: 0.9rem;
-      color: #333;
-    }
   </style>
 </head>
+
 <body>
   <header>
-    <h1>Welcome to the BillyAl home workshop website!!!</h1>
+    <h1>Welcome to the BillyAl home workshop website</h1>
   </header>
-  </main>
-  
-  
-	<div class="d-flex justify-content-center my-5">
-    <div class="text-center w-100 p-4" style="font-family: 'Bronzion Castle'; max-width: 900px; border: 4px double #333; border-radius: 12px; background-color: #e0e0e0;">
-    <h2 class="click-heading mb-4">
-      Let me introduce myself
-    </h2>
-    <div class="ratio ratio-16x9 mb-4">
-      <iframe
-        src="https://www.youtube.com/embed/qFNRySl9jX0"
-        title="YouTube video"
-        allowfullscreen>
-      </iframe>
-    </div>  
-    </div>
-    </div>
 
-</div>
+  <div class="wrapper">
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <ul class="nav flex-column text-start">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Main Page</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="collapse" href="#submenu1" role="button" aria-expanded="false">
+            BillyAl Production
+          </a>
+          <div class="collapse" id="submenu1">
+            <ul class="nav flex-column ms-3">
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="collapse" href="#submenuStraps" role="button" aria-expanded="false">
+                  Canteen Straps
+                </a>
+                <div class="collapse" id="submenuStraps">
+                  <ul class="nav flex-column ms-3">
+                    <li class="nav-item"><a class="nav-link" href="webbingCanteenStraps.html">Coconut Canteens</a></li>
+                    <li class="nav-item"><a class="nav-link" href="webbingCanteenStraps.html">Tropical Canteens</a></li>
+                    <li class="nav-item"><a class="nav-link" href="webbingCanteenStraps.html">M31 Canteen</a></li>
+                  </ul>
+                </div>
+              </li>
+			  <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="collapse" href="#submenuSlings" role="button" aria-expanded="false">
+                  Mauser Slings
+                </a>
+                <div class="collapse" id="submenuSlings">
+                  <ul class="nav flex-column ms-3">
+                    <li class="nav-item"><a class="nav-link" href="webbingCanteenStraps.html">Mauser Gew98 sling v1</a></li>
+                    <li class="nav-item"><a class="nav-link" href="webbingCanteenStraps.html">Mauser Gew98 sling v2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="webbingCanteenStraps.html">Mauser Mod98 sling</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+		<li class="nav-item">
+          <a class="nav-link" data-bs-toggle="collapse" href="#submenu2" role="button" aria-expanded="false">
+            Xela39 Production
+          </a>
+          <div class="collapse" id="submenu2">
+            <ul class="nav flex-column ms-3">
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="collapse" href="#submenuTornisters" role="button" aria-expanded="false">
+                  German Tornisters
+                </a>
+                <div class="collapse" id="submenuTornisters">
+                  <ul class="nav flex-column ms-3">
+                    <li class="nav-item"><a class="nav-link" href="webbingCanteenStraps.html">WWII M34</a></li>
+                    <li class="nav-item"><a class="nav-link" href="webbingCanteenStraps.html">WWII M39</a></li>
+                    <li class="nav-item"><a class="nav-link" href="webbingCanteenStraps.html">WWI M1993</a></li>
+                  </ul>
+                </div>
+              </li>
+			  <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="collapse" href="#submenuRucksacks" role="button" aria-expanded="false">
+                  German Rucksacks
+                </a>
+                <div class="collapse" id="submenuRucksacks">
+                  <ul class="nav flex-column ms-3">
+                    <li class="nav-item"><a class="nav-link" href="webbingCanteenStraps.html">Heer rucksack early version</a></li>
+                    <li class="nav-item"><a class="nav-link" href="webbingCanteenStraps.html">Heer rucksack late version</a></li>
+                    <li class="nav-item"><a class="nav-link" href="webbingCanteenStraps.html">Luftwaffe rucksack</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
 
-    <main class="container">
-      
-	  
-	  <div class="section-link">
-      <a href="canteenStraps.html">
-          <img src="img/previewpics/straps.jpg" alt="Canteen Starps">
-          <h2>Straps for</h2>
-		  <h2>German WWII</h2>
-		  <h2>Canteens</h2>
-        </a>
+    <!-- Main content -->
+    <main>
+      <div class="video-block">
+        <h2>Let me introduce myself</h2>
+        <div class="ratio ratio-16x9">
+          <iframe src="https://www.youtube.com/embed/qFNRySl9jX0" title="YouTube video" allowfullscreen></iframe>
+        </div>
       </div>
-
-      <div class="section-link">
-        <a href="mauserSlings.html">
-          <img src="img/previewpics/mauserSlings.jpg" alt="Mauser Slings">
-          <h2>Slings for</h2>
-		  <h2>Mauser</h2>
-		  <h2>WW1 & WW2</h2>
-        </a>
-      </div>
-	
-	  <div class="section-link">
-        <a href="xela39.html">
-          <img src="img/previewpics/xela39_logo.jpg" alt="Xela39">
-          <h2>Xela39</h2>
-		  <h2>IN STOCK</h2>
-		  <h2>USA</h2>
-        </a>
-      </div>
-	<div class="section-link">
-        <a href="fieldgear.html">
-          <img src="img/previewpics/fieldgear.jpg" alt="Fieldgear">
-          <h2>My Collection</h2>
-		  <h2>And</h2>
-		  <h2>Reenactment fieldgear</h2>
-        </a>
-      </div>	 
-		  
     </main>
-  </main>
-  <footer>
+  </div>
+
+  <footer class="text-center mt-auto">
     <p>Disclaimer: We do not sympathize with past or present fascist ideology or regimes.</p>
-	<p>The products sold within are for historical reproduction and reenactment purposes only.</p>
+    <p>The products sold within are for historical reproduction and reenactment purposes only.</p>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

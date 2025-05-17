@@ -26,6 +26,20 @@
       border-top: 4px solid #000;
       border-bottom: 4px solid #000;
     }
+	.breadcrumb a {
+    text-decoration: none;
+    color: #e0e0e0;
+    }
+    
+    .breadcrumb a:hover {
+    text-decoration: underline;
+    color: #e0e0e0;
+    }
+	.breadcrumb-item.active {
+    color: #b89c4c; /* или любой нужный цвет, например: #d35400 */
+    
+}
+	
 	.btn-gold {
       background-color: #b89c4c;
       border: none;
@@ -83,12 +97,16 @@
   <header>
     <h1>Leather slings for German army Mauser</h1>
   </header>
+  <nav aria-label="breadcrumb" class="my-3">
+  <ol class="breadcrumb justify-content-center">
+    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Mauser Slings</li>
+  </ol>
+</nav>
+  
+  
  </main>
     
-	<div class="text-start my-4">
-      <a href="Index.html" class="btn btn-gold">← Back to Home</a>
-    </div>
-	
 	<div class="d-flex justify-content-center my-5">
     <div class="text-center w-100 p-4" style="font-family: 'Bronzion Castle'; max-width: 900px; border: 4px double #333; border-radius: 12px; background-color: #e0e0e0;">
     <h2 class="click-heading mb-4">
