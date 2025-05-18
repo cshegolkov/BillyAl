@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BillyAl</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .announcement-bar {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 5px 0;
+      font-size: 0.9rem;
+    }
+
+    .main-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-left, .header-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .header-center .logo {
+      height: 50px;
+    }
+
+    .icon-button {
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    .nav-bar {
+      background-color: #f8f8f8;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .nav-bar ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+      padding: 10px 0;
+      gap: 20px;
+    }
+
+    .nav-bar li a {
+      text-decoration: none;
+      color: #000;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-bar li a:hover {
+      color: #0077cc;
+    }
+
+    @media (max-width: 768px) {
+      .main-header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .nav-bar ul {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="announcement-bar">
+    БЕСПЛАТНАЯ ДОСТАВКА ПРИ ЗАКАЗАХ СВЫШЕ $150
+  </div>
+
+  <header class="main-header">
+    <div class="header-left">
+      <button class="icon-button">🔍</button>
+    </div>
+    <div class="header-center">
+      <img src="your-logo.png" alt="BillyAl Logo" class="logo">
+    </div>
+    <div class="header-right">
+      <button class="icon-button">👤</button>
+      <button class="icon-button">🛒</button>
+    </div>
+  </header>
+
+  <nav class="nav-bar">
+    <ul>
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">Продукция</a></li>
+      <li><a href="#">О нас</a></li>
+      <li><a href="#">Контакты</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section style="padding: 40px; text-align: center;">
+      <h1>Добро пожаловать в BillyAl</h1>
+      <p>Реконструкция. Качество. История.</p>
+    </section>
+  </main>
+</body>
+</html>

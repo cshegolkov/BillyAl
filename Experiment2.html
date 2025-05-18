@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BillyAl Workshop - Main page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    @font-face {
+      font-family: 'Bronzion Castle';
+      src: url('fonts/friz-quadrata-regular.ttf') format('truetype');
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: Georgia, serif;
+      background: url('splinter-fabric1.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #111;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* заменили с flex-start на center */
+    padding: 10px 20px;
+    background-color: #BAB78D;
+	border-top: 4px solid #000;
+      border-bottom: 4px solid #000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+
+    .logo {
+      height: 150px;
+      width: auto;
+      display: block;
+    }
+
+    .header-center {
+      text-align: center;
+      flex-grow: 1;
+      padding: 0 20px;
+    }
+
+    .header-center h1 {
+      font-family: 'Bronzion Castle', cursive;
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin: 0;
+      color: #111;
+      letter-spacing: 2px;
+    }
+
+    .header-center p {
+      font-family: 'Bronzion Castle', cursive;
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin: 0;
+      color: #111;
+      letter-spacing: 2px;
+    }
+
+    .header-right {
+	  font-family: 'Bronzion Castle', cursive;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      align-items: flex-end; /* выравнивание по левому краю */
+    }
+
+    .header-right a {
+      text-decoration: none;
+      color: #111;
+      font-weight: 600;
+      font-size: 0.9rem; /* уменьшенный шрифт */
+      padding: 4px 6px;
+      line-height: 1.2;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+      display: block;
+    }
+
+    .header-right a:hover {
+      background-color: #0077cc;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .main-header {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .header-right {
+        align-items: flex-start; /* тоже по левому краю на мобилках */
+      }
+    }
+
+    .wrapper {
+      flex: 1 0 auto;
+      display: flex;
+      flex-direction: row;
+    }
+
+    main {
+      flex-grow: 1;
+      padding: 2rem;
+    }
+
+    footer {
+      background-color: #BAB78D;
+      padding: 1.5rem;
+      text-align: center;
+      border-top: 4px solid #000;
+      border-bottom: 4px solid #000;
+      font-size: 0.9rem;
+      color: #333;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="main-header">
+    <div class="header-left">
+      <img src="logo_oliv.jpg" alt="BillyAl Logo" class="logo">
+    </div>
+    <div class="header-center">
+      <h1>Welcome to the BillyAl home workshop website</h1>
+      <p>HISTORY, REENACTMENT, QUALITY</p>
+    </div>
+    <div class="header-right">
+      <a href="#">Main Page</a>
+      <a href="#">BillyAl Production</a>
+      <a href="#">Xela39 Production</a>
+      <a href="#">My Collection</a>
+      <a href="#">My Reenactment Equipment</a>
+    </div>
+  </header>
+
+  <div class="wrapper">
+    <main>
+      <div class="d-flex justify-content-center my-5">
+        <div class="text-center w-100 p-4" style="font-family: 'Bronzion Castle'; max-width: 900px; border: 4px double #333; border-radius: 12px; background-color: #e0e0e0;">
+          <h2 class="click-heading mb-4">Let me introduce myself</h2>
+          <div class="ratio ratio-16x9 mb-4">
+            <iframe
+              src="https://www.youtube.com/embed/qFNRySl9jX0"
+              title="YouTube video"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <footer class="text-center mt-auto">
+    <p>Disclaimer: We do not sympathize with past or present fascist ideology or regimes.</p>
+    <p>The products sold within are for historical reproduction and reenactment purposes only.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
