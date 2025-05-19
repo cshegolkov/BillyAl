@@ -76,17 +76,15 @@
       align-items: flex-end; /* выравнивание по левому краю */
     }
 
-    .header-right a {
-      text-decoration: none;
-      color: #111;
-      font-weight: 600;
-      font-size: 0.9rem; /* уменьшенный шрифт */
-      padding: 4px 6px;
-      line-height: 1.2;
-      border-radius: 4px;
-      transition: background-color 0.3s, color 0.3s;
-      display: block;
-    }
+    .header-right {
+  font-family: 'Bronzion Castle', cursive;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: flex-end; /* выравнивание контента */
+  text-align: right;     /* выравнивание текста */
+  margin-left: auto;     /* прижимаем весь блок к правому краю */
+}
 
     .header-right a:hover {
       background-color: #0077cc;
@@ -101,7 +99,7 @@
       }
 
       .header-right {
-        align-items: flex-start; /* тоже по левому краю на мобилках */
+        align-items: flex-end; /* тоже по левому краю на мобилках */
       }
     }
 
@@ -110,6 +108,15 @@
       display: flex;
       flex-direction: row;
     }
+
+	.mobile-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-family: Georgia, serif;
+    font-size: 1rem;
+    color: #111;
+    }
+
 
     main {
       flex-grow: 1;
@@ -131,50 +138,64 @@
 
 <body>
   <header class="main-header">
-    <div class="header-left">
-      <a href="index.html">
+  <div class="header-left">
+    <a href="index.html">
       <img src="logo_oliv.jpg" alt="BillyAl Logo" class="logo">
-      </a>
-    </div>
-    <div class="header-center d-none d-md-block">
-      <h1>Welcome to the BillyAl home workshop website</h1>
-      <p>HISTORY, REENACTMENT, QUALITY</p>
-    </div>
-  </header>
-  
-    <div class="section-nav d-flex justify-content-center flex-wrap text-center py-2"
+    </a>
+  </div>
+
+  <div class="header-center d-none d-md-block">
+    <h1>Welcome to the BillyAl home workshop website</h1>
+    <p>HISTORY, REENACTMENT, QUALITY</p>
+  </div>
+
+  <div class="header-right d-none d-md-block">
+    <p>WhatsApp: +1 7473099791</p>
+    <p>Telegram: +38 0505724737</p>
+    <p>Viber: +1 7473099791</p>
+    <p>billyal.home.workshop@gmail.com</p>
+  </div>
+</header>
+
+ <div class="section-nav d-flex justify-content-center flex-wrap text-center py-2"
      style="font-family: 'Bronzion Castle'; background-color: #BAB78D; border-bottom: 4px solid #000; position: sticky; top: 177px; z-index: 999;">
-  <a href="billyalproduction.html" class="mx-3 my-1 text-dark text-decoration-none fw-bold">
-  BillyAl Production
-  </a>
-  <a href="xela39production.html" class="mx-3 my-1 text-dark text-decoration-none fw-bold">
-  Xela39 Production
-  </a>
-  <a href="MyCollection.html" class="mx-3 my-1 text-dark text-decoration-none fw-bold">
-  My Collection
-  </a>
-  <a href="MyReenactmentEquipment.html" class="mx-3 my-1 text-dark text-decoration-none fw-bold">
-  My Reenactment Equipment
-  </a>
-</div>
+    <a href="billyalproduction.html" class="mx-3 my-1 text-dark text-decoration-none fw-bold">
+    BillyAl Production
+    </a>
+    <a href="xela39production.html" class="mx-3 my-1 text-dark text-decoration-none fw-bold">
+    Xela39 Production
+    </a>
+    <a href="MyCollection.html" class="mx-3 my-1 text-dark text-decoration-none fw-bold">
+    My Collection
+    </a>
+    <a href="MyReenactmentEquipment.html" class="mx-3 my-1 text-dark text-decoration-none fw-bold">
+    My Reenactment Equipment
+    </a>
+ </div>
 
-
-    <div class="wrapper">
-    <main>
-      <div class="d-flex justify-content-center my-2">
-        <div class="text-center w-100 p-4" style="font-family: 'Bronzion Castle'; max-width: 900px; border: 4px solid #000; border-radius: 12px; background-color: #BAB78D   ;">
-          <h2 class="click-heading mb-4">Let me introduce myself</h2>
-          <div class="ratio ratio-16x9 mb-4">
-            <iframe
-              src="https://www.youtube.com/embed/qFNRySl9jX0"
-              title="YouTube video"
-              allowfullscreen>
-            </iframe>
-          </div>
-        </div>
+  <main>
+  <div class="d-flex justify-content-center my-2">
+    <div class="text-center w-100 p-4" style="font-family: 'Bronzion Castle'; max-width: 900px; border: 4px solid #000; border-radius: 12px; background-color: #BAB78D;">
+      <h2 class="click-heading mb-4">Let me introduce myself</h2>
+      <div class="ratio ratio-16x9 mb-4">
+        <iframe
+          src="https://www.youtube.com/embed/qFNRySl9jX0"
+          title="YouTube video"
+          allowfullscreen>
+        </iframe>
       </div>
-    </main>
+
+      <!-- Вот здесь — список ТОЛЬКО для мобильных -->
+      <ul class="mobile-list d-md-none mt-3 text-start">
+        <li>Handmade gear</li>
+        <li>Historical accuracy</li>
+        <li>Worldwide shipping</li>
+      </ul>
+
     </div>
+  </div>
+</main>
+
 
   <footer class="text-center mt-auto">
     <p>Disclaimer: We do not sympathize with past or present fascist ideology or regimes.</p>

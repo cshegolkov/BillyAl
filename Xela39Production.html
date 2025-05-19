@@ -105,12 +105,44 @@
       }
     }
 
-    .wrapper {
-      flex: 1 0 auto;
-      display: flex;
-      flex-direction: row;
+    .main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 1rem;
     }
 
+    .section-link a {
+      text-decoration: none;
+      color: inherit;
+	}
+    
+	.section-link {
+      background: #e0e0e0;
+      border: 4px solid #000; border-radius: 12px; background-color: #BAB78D;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 1rem;
+      transition: transform 0.3s;
+    }
+    .section-link:hover {
+      transform: translateY(-5px);
+    }
+    .section-link img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 6px;
+      border: 3px solid #000;
+    }
+    .section-link h2 {
+      margin-top: 0.75rem;
+      font-size: 1.5rem;
+      font-family: 'Bronzion Castle', cursive;
+      color: #000;
+    }
+	
     main {
       flex-grow: 1;
       padding: 2rem;
@@ -158,23 +190,72 @@
   </a>
 </div>
 
-
-    <div class="wrapper">
-    <main>
-      <div class="d-flex justify-content-center my-2">
-        <div class="text-center w-100 p-4" style="font-family: 'Bronzion Castle'; max-width: 900px; border: 4px solid #000; border-radius: 12px; background-color: #BAB78D   ;">
-          <h2 class="click-heading mb-4">Let me introduce myself</h2>
-          <div class="ratio ratio-16x9 mb-4">
-            <iframe
-              src="https://www.youtube.com/embed/qFNRySl9jX0"
-              title="YouTube video"
-              allowfullscreen>
-            </iframe>
-          </div>
-        </div>
-      </div>
-    </main>
+  <div class="main d-flex flex-wrap justify-content-center gap-4 p-3">
+    
+	<div class="section-link">
+    <a href="xela39rucksacks.html">
+      <img src="img/previewpics/xela39rucksacks.jpg" alt="Xela39 Rucksacks">
+      <h2>Rucksacks</h2>
+      <h2>Xela39</h2>
+      <h2>Heer and Luftwaffe</h2>
+    </a>
     </div>
+	
+	<div class="section-link">
+    <a href="TropicalCanteens.html">
+      <img src="img/previewpics/tropicalCanteen.jpg" alt="Tropical Canteens">
+      <h2>Straps for</h2>
+      <h2>German WWII</h2>
+      <h2>Tropical Canteens</h2>
+    </a>
+    </div>
+	
+	<div class="section-link">
+    <a href="MedicalCanteens.html">
+      <img src="img/previewpics/MedicalCanteen.jpg" alt="Medical Canteens">
+      <h2>Straps for</h2>
+      <h2>German WWII</h2>
+      <h2>Medical Canteens</h2>
+    </a>
+    </div>
+	
+	<div class="section-link">
+    <a href="m31.html">
+      <img src="img/previewpics/M31.jpg" alt="m31 Canteens">
+      <h2>Straps for</h2>
+      <h2>German WWII</h2>
+      <h2>M31 Canteens</h2>
+    </a>
+    </div>
+
+    <div class="section-link">
+    <a href="mauserSlings.html">
+      <img src="img/previewpics/mauserSlings.jpg" alt="Mauser Slings">
+      <h2>Slings for</h2>
+      <h2>Mauser</h2>
+      <h2>Gew98 ver.1</h2>
+    </a>
+    </div>
+	
+	<div class="section-link">
+    <a href="mauserSlings.html">
+      <img src="img/previewpics/mauserSlings.jpg" alt="Mauser Slings">
+      <h2>Slings for</h2>
+      <h2>Mauser</h2>
+      <h2>Gew98 ver.2</h2>
+    </a>
+    </div>
+	
+	<div class="section-link">
+    <a href="mauserSlings.html">
+      <img src="img/previewpics/mauserSlings.jpg" alt="Mauser Slings">
+      <h2>Slings for</h2>
+      <h2>Mauser</h2>
+      <h2>Mod98</h2>
+    </a>
+    </div>
+  
+  </div>
 
   <footer class="text-center mt-auto">
     <p>Disclaimer: We do not sympathize with past or present fascist ideology or regimes.</p>
