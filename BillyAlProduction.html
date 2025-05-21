@@ -76,17 +76,15 @@
       align-items: flex-end; /* выравнивание по левому краю */
     }
 
-    .header-right a {
-      text-decoration: none;
-      color: #111;
-      font-weight: 600;
-      font-size: 0.9rem; /* уменьшенный шрифт */
-      padding: 4px 6px;
-      line-height: 1.2;
-      border-radius: 4px;
-      transition: background-color 0.3s, color 0.3s;
-      display: block;
-    }
+    .header-right {
+  font-family: 'Bronzion Castle', cursive;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: flex-end; /* выравнивание контента */
+  text-align: right;     /* выравнивание текста */
+  margin-left: auto;     /* прижимаем весь блок к правому краю */
+}
 
     .header-right a:hover {
       background-color: #0077cc;
@@ -163,16 +161,24 @@
 
 <body>
   <header class="main-header">
-    <div class="header-left">
-      <a href="index.html">
+  <div class="header-left">
+    <a href="index.html">
       <img src="logo_oliv.jpg" alt="BillyAl Logo" class="logo">
-      </a>
-    </div>
-    <div class="header-center d-none d-md-block">
-      <h1>Welcome to the BillyAl home workshop website</h1>
-      <p>HISTORY, REENACTMENT, QUALITY</p>
-    </div>
-  </header>
+    </a>
+  </div>
+
+  <div class="header-center d-none d-md-block">
+    <h1>Welcome to the BillyAl home workshop website</h1>
+    <p>QUALITY REPRODUCTIONS FOR WW1-WW2 GERMAN REENACTMENT</p>
+  </div>
+
+  <div class="header-right d-none d-md-block">
+    <p>WhatsApp: +1 7473099791</p>
+    <p>Telegram: +38 0505724737</p>
+    <p>Viber: +1 7473099791</p>
+    <p>billyal.home.workshop@gmail.com</p>
+  </div>
+</header>
   
     <div class="section-nav d-flex justify-content-center flex-wrap text-center py-2"
      style="font-family: 'Bronzion Castle'; background-color: #BAB78D; border-bottom: 4px solid #000; position: sticky; top: 177px; z-index: 999;">

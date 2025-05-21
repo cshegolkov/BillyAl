@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>M36 Wehrmacht SS Feldbluse Tunic</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 1rem;
+      background: white;
+    }
+
+    .product-main {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .product-images {
+      flex: 1 1 300px;
+    }
+
+    .product-images img {
+      width: 100%;
+      border: 1px solid #ccc;
+    }
+
+    .gallery {
+      margin-top: 1rem;
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .gallery img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      cursor: pointer;
+      border: 1px solid #aaa;
+    }
+
+    .product-info {
+      flex: 1 1 300px;
+    }
+
+    .product-title {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .product-price {
+      font-size: 1.4rem;
+      color: #c00;
+      margin-bottom: 1rem;
+    }
+
+    .short-description {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+      .product-main {
+        flex-direction: column;
+      }
+
+      .product-images,
+      .product-info {
+        width: 100%;
+      }
+
+      .product-title {
+        font-size: 1.5rem;
+      }
+
+      .product-price {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="product-main">
+      <!-- Левая колонка с фото -->
+      <div class="product-images">
+        <img id="main-image" src="images/m36-front.jpg" alt="M36 Feldbluse Front" />
+        <div class="gallery">
+          <img src="images/m36-front.jpg" alt="Front" onclick="changeImage(this)">
+          <img src="images/m36-back.jpg" alt="Back" onclick="changeImage(this)">
+          <img src="images/m36-detail.jpg" alt="Detail" onclick="changeImage(this)">
+        </div>
+      </div>
+
+      <!-- Правая колонка с текстом -->
+      <div class="product-info">
+        <h1 class="product-title">M36 Wehrmacht SS Feldbluse Tunic</h1>
+        <p class="product-price">$129.00</p>
+        <div class="short-description">
+          <p>This high-quality reproduction of the WWII German M36 tunic features authentic materials, cut, and details used by the Wehrmacht and SS.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function changeImage(el) {
+      document.getElementById('main-image').src = el.src;
+    }
+  </script>
+</body>
+</html>
