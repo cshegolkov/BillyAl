@@ -24,19 +24,18 @@
     }
 
     .main-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; /* заменили с flex-start на center */
-    padding: 10px 20px;
-    background-color: #BAB78D;
-	border-top: 4px solid #000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #BAB78D;
+      border-top: 4px solid #000;
       border-bottom: 4px solid #000;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
-
 
     .logo {
       height: 150px;
@@ -69,21 +68,13 @@
     }
 
     .header-right {
-	  font-family: 'Bronzion Castle', cursive;
+      font-family: 'Bronzion Castle', cursive;
       display: flex;
       flex-direction: column;
       gap: 2px;
-      align-items: flex-end; /* выравнивание по левому краю */
-    }
-
-    .header-right {
-    font-family: 'Bronzion Castle', cursive;
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    align-items: flex-end; /* выравнивание контента */
-    text-align: right;     /* выравнивание текста */
-    margin-left: auto;     /* прижимаем весь блок к правому краю */
+      align-items: flex-end;
+      text-align: right;
+      margin-left: auto;
     }
 
     .header-right a:hover {
@@ -106,11 +97,15 @@
 
     .product-images {
       flex: 1 1 300px;
+      position: relative; /* для позиционирования стрелок */
     }
 
     .product-images img {
       width: 100%;
-      border: 4px solid #000; border-radius: 12px; background-color: #BAB78D;
+      border: 4px solid #000;
+      border-radius: 12px;
+      background-color: #BAB78D;
+      display: block;
     }
 
     .gallery {
@@ -125,7 +120,47 @@
       height: 60px;
       object-fit: cover;
       cursor: pointer;
-      border: 4px solid #000; border-radius: 12px; background-color: #BAB78D;
+      border: 4px solid #000;
+      border-radius: 12px;
+      background-color: #BAB78D;
+      transition: transform 0.2s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Стрелки для пролистывания */
+    .arrow-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      font-size: 28px;
+      line-height: 1;
+      user-select: none;
+      transition: background-color 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .arrow-btn:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    #prevBtn {
+      left: 10px;
+    }
+
+    #nextBtn {
+      right: 10px;
     }
 
     .product-info {
@@ -133,18 +168,21 @@
     }
 
     .product-title {
-      font-family: 'Bronzion Castle'; font-size: 1.8rem;
+      font-family: 'Bronzion Castle';
+      font-size: 1.8rem;
       margin-bottom: 0.5rem;
     }
 
     .product-price {
-      font-family: 'Bronzion Castle'; font-size: 1.4rem;
+      font-family: 'Bronzion Castle';
+      font-size: 1.4rem;
       color: #c00;
       margin-bottom: 1rem;
     }
 
     .short-description {
-      font-family: 'Bronzion Castle'; font-size: 1rem;
+      font-family: 'Bronzion Castle';
+      font-size: 1rem;
       line-height: 1.5;
     }
 
@@ -159,11 +197,13 @@
       }
 
       .product-title {
-        font-family: 'Bronzion Castle'; font-size: 1.5rem;
+        font-family: 'Bronzion Castle';
+        font-size: 1.5rem;
       }
 
       .product-price {
-        font-family: 'Bronzion Castle'; font-size: 1.2rem;
+        font-family: 'Bronzion Castle';
+        font-size: 1.2rem;
       }
     }
 
@@ -182,57 +222,62 @@
 
 <body>
   <header class="main-header">
-  <div class="header-left">
-    <a href="index.html">
-      <img src="logo_oliv.jpg" alt="BillyAl Logo" class="logo">
-    </a>
-  </div>
+    <div class="header-left">
+      <a href="index.html">
+        <img src="logo_oliv.jpg" alt="BillyAl Logo" class="logo" />
+      </a>
+    </div>
 
-  <div class="header-center d-none d-md-block">
-    <h1>Welcome to the BillyAl home workshop website</h1>
-    <p>QUALITY REPRODUCTIONS FOR WW1-WW2 GERMAN REENACTMENT</p>
-  </div>
+    <div class="header-center d-none d-md-block">
+      <h1>Welcome to the BillyAl home workshop website</h1>
+      <p>QUALITY REPRODUCTIONS FOR WW1-WW2 GERMAN REENACTMENT</p>
+    </div>
 
-  <div class="header-right d-none d-md-block">
-    <p>WhatsApp: +1 7473099791</p>
-    <p>Telegram: +38 0505724737</p>
-    <p>Viber: +1 7473099791</p>
-    <p>billyal.home.workshop@gmail.com</p>
-  </div>
-</header>
+    <div class="header-right d-none d-md-block">
+      <p>WhatsApp: +1 7473099791</p>
+      <p>Telegram: +38 0505724737</p>
+      <p>Viber: +1 7473099791</p>
+      <p>billyal.home.workshop@gmail.com</p>
+    </div>
+  </header>
 
- <div class="section-nav d-flex justify-content-center flex-wrap text-center py-2"
-     style="font-family: 'Bronzion Castle'; background-color: #BAB78D; border-bottom: 4px solid #000; position: sticky; top: 177px; z-index: 999;">
+  <div class="section-nav d-flex justify-content-center flex-wrap text-center py-2"
+    style="font-family: 'Bronzion Castle'; background-color: #BAB78D; border-bottom: 4px solid #000; position: sticky; top: 177px; z-index: 999;">
     <a href="billyalproduction.html" class="mx-3 my-1 text-dark text-decoration-none fw-bold">
-    BillyAl Production
+      BillyAl Production
     </a>
     <a href="xela39production.html" class="mx-3 my-1 text-dark text-decoration-none fw-bold">
-    Xela39 Production
+      Xela39 Production
     </a>
     <a href="MyCollection.html" class="mx-3 my-1 text-dark text-decoration-none fw-bold">
-    My Collection
+      My Collection
     </a>
     <a href="MyReenactmentEquipment.html" class="mx-3 my-1 text-dark text-decoration-none fw-bold">
-    My Reenactment Equipment
+      My Reenactment Equipment
     </a>
- </div>
+  </div>
 
   <div class="container">
     <div class="product-main">
       <!-- Левая колонка с фото -->
       <div class="product-images">
         <img id="main-image" src="img/Assembled_Canteen_1/1.jpg" alt="1" />
+
+        <!-- Стрелки -->
+        <button id="prevBtn" class="arrow-btn" aria-label="Previous image">‹</button>
+        <button id="nextBtn" class="arrow-btn" aria-label="Next image">›</button>
+
         <div class="gallery">
-          <img src="img/Assembled_Canteen_1/1.jpg" alt="1" onclick="changeImage(this)">
-          <img src="img/Assembled_Canteen_1/2.jpg" alt="2" onclick="changeImage(this)">
-          <img src="img/Assembled_Canteen_1/3.jpg" alt="3" onclick="changeImage(this)">
-		  <img src="img/Assembled_Canteen_1/4.jpg" alt="4" onclick="changeImage(this)">
-		  <img src="img/Assembled_Canteen_1/5.jpg" alt="5" onclick="changeImage(this)">
-		  <img src="img/Assembled_Canteen_1/6.jpg" alt="6" onclick="changeImage(this)">
-		  <img src="img/Assembled_Canteen_1/7.jpg" alt="7" onclick="changeImage(this)">
-		  <img src="img/Assembled_Canteen_1/8.jpg" alt="8" onclick="changeImage(this)">
-		  <img src="img/Assembled_Canteen_1/9.jpg" alt="9" onclick="changeImage(this)">
-		  <img src="img/Assembled_Canteen_1/10.jpg" alt="10" onclick="changeImage(this)">
+          <img src="img/Assembled_Canteen_1/1.jpg" alt="1" onclick="changeImage(this)" />
+          <img src="img/Assembled_Canteen_1/2.jpg" alt="2" onclick="changeImage(this)" />
+          <img src="img/Assembled_Canteen_1/3.jpg" alt="3" onclick="changeImage(this)" />
+          <img src="img/Assembled_Canteen_1/4.jpg" alt="4" onclick="changeImage(this)" />
+          <img src="img/Assembled_Canteen_1/5.jpg" alt="5" onclick="changeImage(this)" />
+          <img src="img/Assembled_Canteen_1/6.jpg" alt="6" onclick="changeImage(this)" />
+          <img src="img/Assembled_Canteen_1/7.jpg" alt="7" onclick="changeImage(this)" />
+          <img src="img/Assembled_Canteen_1/8.jpg" alt="8" onclick="changeImage(this)" />
+          <img src="img/Assembled_Canteen_1/9.jpg" alt="9" onclick="changeImage(this)" />
+          <img src="img/Assembled_Canteen_1/10.jpg" alt="10" onclick="changeImage(this)" />
         </div>
       </div>
 
@@ -242,19 +287,47 @@
         <p class="product-price">$100.00</p>
         <div class="short-description">
           <p>This is an original WWII-issued canteen, equipped with newly made straps, lid, and cup.</p>
-          <p>The tan-colored strap is made of natural 16mm (5/8 inch) cotton strap, just as it should be. It is hand-sewn with natural linen thread. This is a mid- to late-war period version with a simple roller buckle.</p>
-          <p>The item is located in California, USA. It will be shipped via USPS. Shipping within the continental United States is up to $10.</p>
+          <p>The tan-colored strap is made of natural 16mm (5/8 inch) cotton strap, just as it should be. It is hand-sewn
+            with natural linen thread. This is a mid- to late-war period version with a simple roller buckle.</p>
+          <p>The item is located in California, USA. It will be shipped via USPS. Shipping within the continental United
+            States is up to $10.</p>
           <p>I accept payment via PayPal or a simple Zelle transfer.</p>
-
         </div>
       </div>
     </div>
   </div>
 
   <script>
+    const images = [
+      "img/Assembled_Canteen_1/1.jpg",
+      "img/Assembled_Canteen_1/2.jpg",
+      "img/Assembled_Canteen_1/3.jpg",
+      "img/Assembled_Canteen_1/4.jpg",
+      "img/Assembled_Canteen_1/5.jpg",
+      "img/Assembled_Canteen_1/6.jpg",
+      "img/Assembled_Canteen_1/7.jpg",
+      "img/Assembled_Canteen_1/8.jpg",
+      "img/Assembled_Canteen_1/9.jpg",
+      "img/Assembled_Canteen_1/10.jpg"
+    ];
+
+    let currentIndex = 0;
+
     function changeImage(el) {
-      document.getElementById('main-image').src = el.src;
+      const mainImage = document.getElementById('main-image');
+      mainImage.src = el.src;
+      currentIndex = images.indexOf(el.src);
     }
+
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      document.getElementById('main-image').src = images[currentIndex];
+    });
+
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % images.length;
+      document.getElementById('main-image').src = images[currentIndex];
+    });
   </script>
 
   <footer class="text-center mt-auto">
